@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: offerte-maker-db
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "YourSecurePassword123!"
+      MSSQL_PID: "Developer"
+      MSSQL_LCID: "1033"
+      MSSQL_COLLATION: "SQL_Latin1_General_CP1_CI_AS"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver-data:/var/opt/mssql
+    healthcheck:
+      test:
+        - CMD
+        - /opt/mssql-tools/bin/sqlcmd
+        - -S
+        - localhost
+        - -U
+        - sa
+        - -P
+        - "YourSecurePassword123!"
+        - -Q
+        - "SELECT 1"
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    networks:
+      - offerte-maker-network
+
+  # Optional: SQL Server Management Studio (Azure Data Studio would work too)
+  # You can use any SQL client to connect to localhost:1433
+
+volumes:
+  sqlserver-data:
+    driver: local
+
+networks:
+  offerte-maker-network:
+    driver: bridge
