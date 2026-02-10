@@ -196,19 +196,12 @@ public static class ServiceExtensions
             {
                 Title = "Offerte-Maker-Api", 
                 Version = "v1",
-                Description = "Offerte Maker API - Professional quote generation system",
+                Description = "Offerte Maker API - by AIctivity",
                 TermsOfService = new Uri("https://example.com/terms"),
                 Contact = new OpenApiContact
                 {
-                    Name = "John Doe",
-                    Email = "John.Doe@gmail.com",
-                    Url = new Uri("https://twitter.com/johndoe"),
+                    Name = "AIctivity",
                 },
-                License = new OpenApiLicense
-                {
-                    Name = "CompanyEmployees API LICX",
-                    Url = new Uri("https://example.com/license"),
-                }
             });
             s.SwaggerDoc("v2", new OpenApiInfo { Title = "Offerte-Maker-Api", Version = "v2" });
 
