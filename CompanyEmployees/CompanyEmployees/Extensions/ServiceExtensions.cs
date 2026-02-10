@@ -192,11 +192,11 @@ public static class ServiceExtensions
     {
         services.AddSwaggerGen(s =>
         {
-            s.SwaggerDoc("v1", new OpenApiInfo 
-            { 
-                Title = "Code Maze API", 
+            s.SwaggerDoc("v1", new OpenApiInfo
+            {
+                Title = "Offerte-Maker-Api", 
                 Version = "v1",
-                Description = "CompanyEmployees API by CodeMaze",
+                Description = "Offerte Maker API - Professional quote generation system",
                 TermsOfService = new Uri("https://example.com/terms"),
                 Contact = new OpenApiContact
                 {
@@ -210,7 +210,7 @@ public static class ServiceExtensions
                     Url = new Uri("https://example.com/license"),
                 }
             });
-            s.SwaggerDoc("v2", new OpenApiInfo { Title = "Code Maze API", Version = "v2" });
+            s.SwaggerDoc("v2", new OpenApiInfo { Title = "Offerte-Maker-Api", Version = "v2" });
 
             var xmlFile = $"{typeof(Presentation.AssemblyReference).Assembly.GetName().Name}.xml";
             var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
