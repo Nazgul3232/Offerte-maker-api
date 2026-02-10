@@ -205,22 +205,37 @@ See [DEVELOPMENT_GUIDELINES.md](./DEVELOPMENT_GUIDELINES.md#troubleshooting) for
 
 ## 🤝 Contributing
 
+For detailed workflow instructions, see **[BRANCHING_STRATEGY.md](./BRANCHING_STRATEGY.md)**
+
+Quick summary:
 1. Create a feature branch: `git checkout -b feature/your-feature-name`
 2. Follow [DEVELOPMENT_GUIDELINES.md](./DEVELOPMENT_GUIDELINES.md)
 3. Follow [CODE_REVIEW_STANDARDS.md](./CODE_REVIEW_STANDARDS.md)
-4. Commit with clear messages: `git commit -m "feat: Add your feature description"`
-5. Push to branch: `git push origin feature/your-feature-name`
-6. Create a Pull Request
+4. Commit with clear messages following [Conventional Commits](https://www.conventionalcommits.org)
+5. Run automated checks: `./scripts/architect-review.sh featurename`
+6. Push to branch and create Pull Request
+7. Architect Agent reviews for architecture compliance
+8. Merge after approval
 
 ### Commit Message Format
 
 ```
-[FEATURE|FIX|REFACTOR|DOCS|CHORE] Brief description
+feat: Brief description of feature
 
 Longer explanation if needed.
 
 Closes #123
 ```
+
+**Standard prefix types:**
+- `feat:` - New feature
+- `fix:` - Bug fix
+- `refactor:` - Code refactoring
+- `docs:` - Documentation
+- `chore:` - Dependencies/build
+- `test:` - Test additions
+
+See [BRANCHING_STRATEGY.md](./BRANCHING_STRATEGY.md#commit-message-format) for detailed examples.
 
 ## 📈 Performance & Optimization
 
@@ -307,7 +322,9 @@ Email: dev@offerte-maker.local
 
 - 📖 [Architecture Guide](./ARCHITECTURE.md)
 - 💻 [Development Guide](./DEVELOPMENT_GUIDELINES.md)
+- 🌳 [Branching Strategy](./BRANCHING_STRATEGY.md)
 - ✅ [Code Review Standards](./CODE_REVIEW_STANDARDS.md)
+- ✓ [Architecture Checklist](./ARCHITECT_CHECKLIST.md)
 - 🔗 [GitHub Repository](https://github.com/Nazgul3232/Offerte-maker-api)
 
 ---
