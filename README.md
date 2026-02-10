@@ -121,9 +121,25 @@ The API uses **JWT (JSON Web Tokens)** for authentication:
 
 ## 🛠️ Development
 
+### Requesting a New API Feature
+
+When you need a new API (e.g., Quotes, Invoices), **start with the Analyst Agent**:
+
+```bash
+# Analyst Agent gathers requirements and produces specification
+# Use: /analyst-agent or discuss feature needs
+# Output: Detailed API specification ready for development
+```
+
+See [API_DESIGN_FRAMEWORK.md](./API_DESIGN_FRAMEWORK.md) for:
+- Analysis of existing APIs (Companies, Employees)
+- All possible API design options
+- Questions Analyst Agent will ask
+- How to specify an API properly
+
 ### Adding a New Feature
 
-Follow the step-by-step guide in [DEVELOPMENT_GUIDELINES.md](./DEVELOPMENT_GUIDELINES.md)
+After API specification, follow the step-by-step guide in [DEVELOPMENT_GUIDELINES.md](./DEVELOPMENT_GUIDELINES.md)
 
 Quick overview:
 1. Create Entity in `Entities/Models/`
@@ -321,6 +337,7 @@ Email: dev@offerte-maker.local
 ## Quick Links
 
 - 📖 [Architecture Guide](./ARCHITECTURE.md)
+- 🤖 [API Design Framework](./API_DESIGN_FRAMEWORK.md) - Existing APIs analysis & Analyst questions
 - 💻 [Development Guide](./DEVELOPMENT_GUIDELINES.md)
 - 🌳 [Branching Strategy](./BRANCHING_STRATEGY.md)
 - ✅ [Code Review Standards](./CODE_REVIEW_STANDARDS.md)
