@@ -4,6 +4,18 @@ Praktische richtlijnen voor het toevoegen van nieuwe features en het handhaven v
 
 ---
 
+## 🚨 BELANGRIJK: Voordat je begint!
+
+**LEES DIT EERST voordat je een nieuwe feature bouwt:**
+
+1. **[ARCHITECT_CHECKLIST.md](./ARCHITECT_CHECKLIST.md)** - Alle requirements die je feature MOET volgen
+2. **[ARCHITECTURE.md](./ARCHITECTURE.md)** - Waarom we deze architectuur gebruiken
+
+**Elke feature zal tegen deze checklist gecontroleerd worden door de Architect Agent.**
+Geen uitzonderingen. Afwijkingen worden geweigerd.
+
+---
+
 ## Quick Start: Toevoegen van een Nieuwe Feature
 
 ### Scenario: Een Nieuwe Entity (bijv. "Project")
