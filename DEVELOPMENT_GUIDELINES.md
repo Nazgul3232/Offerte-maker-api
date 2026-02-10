@@ -154,7 +154,7 @@ public IProjectRepository Project => _projectRepository.Value;
 **EF Migration:**
 
 ```bash
-cd CompanyEmployees
+cd OfferteMakerApi/OfferteMakerApi
 dotnet ef migrations add AddProjectEntity
 dotnet ef database update
 ```
@@ -293,15 +293,15 @@ public record UpdateProjectDto
 
 #### 5. Presentation Layer - Controller
 
-**File:** `CompanyEmployees.Presentation/Controllers/ProjectsController.cs`
+**File:** `OfferteMakerApi.Presentation/Controllers/ProjectsController.cs`
 
 ```csharp
-using CompanyEmployees.Presentation.ActionFilters;
+using OfferteMakerApi.Presentation.ActionFilters;
 using Microsoft.AspNetCore.Mvc;
 using Service.Contracts;
 using Shared.DataTransferObjects;
 
-namespace CompanyEmployees.Presentation.Controllers;
+namespace OfferteMakerApi.Presentation.Controllers;
 
 [ApiController]
 [Route("api/projects")]
@@ -383,14 +383,14 @@ public class ProjectsController : ControllerBase
 
 #### 6. AutoMapper Configuration
 
-**File:** `CompanyEmployees/MappingProfile.cs` (if doesn't exist, create it)
+**File:** `OfferteMakerApi/MappingProfile.cs` (if doesn't exist, create it)
 
 ```csharp
 using AutoMapper;
 using Entities.Models;
 using Shared.DataTransferObjects;
 
-namespace CompanyEmployees;
+namespace OfferteMakerApi;
 
 public class MappingProfile : Profile
 {
@@ -730,7 +730,7 @@ services.AddDbContext<RepositoryContext>(options =>
 
 ```bash
 # Create new migration
-cd CompanyEmployees
+cd OfferteMakerApi/OfferteMakerApi
 dotnet ef migrations add MigrationName
 
 # Apply migrations
@@ -807,5 +807,5 @@ Brief description of changes
 
 ---
 
-**Last Updated:** 2026-02-09
+**Last Updated:** 2026-02-10 (Refactored: CompanyEmployees → OfferteMakerApi)
 **Owner:** Development Team

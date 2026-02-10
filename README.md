@@ -38,7 +38,7 @@ For detailed architecture documentation, see [ARCHITECTURE.md](./ARCHITECTURE.md
 
 2. **Update connection string**
 
-   Edit `CompanyEmployees/appsettings.json`:
+   Edit `OfferteMakerApi/OfferteMakerApi/appsettings.json`:
    ```json
    {
      "ConnectionStrings": {
@@ -49,7 +49,7 @@ For detailed architecture documentation, see [ARCHITECTURE.md](./ARCHITECTURE.md
 
 3. **Apply database migrations**
    ```bash
-   cd CompanyEmployees
+   cd OfferteMakerApi/OfferteMakerApi
    dotnet ef database update
    ```
 
@@ -66,9 +66,9 @@ For detailed architecture documentation, see [ARCHITECTURE.md](./ARCHITECTURE.md
 
 ```
 Offerte-maker-api/
-├── CompanyEmployees/                    # Main API Project
-│   ├── CompanyEmployees/               # API Host & Configuration
-│   ├── CompanyEmployees.Presentation/  # Controllers, Filters, ModelBinders
+├── OfferteMakerApi/                     # Main API Project
+│   ├── OfferteMakerApi/                # API Host & Configuration
+│   ├── OfferteMakerApi.Presentation/   # Controllers, Filters, ModelBinders
 │   ├── Service/                        # Business Logic Services
 │   ├── Service.Contracts/              # Service Interfaces
 │   ├── Repository/                     # Data Access Layer
@@ -130,7 +130,7 @@ Quick overview:
 2. Create Repository in `Repository/`
 3. Create Service in `Service/`
 4. Create DTOs in `Shared/DataTransferObjects/`
-5. Create Controller in `CompanyEmployees.Presentation/Controllers/`
+5. Create Controller in `OfferteMakerApi.Presentation/Controllers/`
 6. Add AutoMapper configuration
 7. Register in `Program.cs`
 
@@ -312,6 +312,6 @@ Email: dev@offerte-maker.local
 
 ---
 
-**Last Updated:** 2026-02-09
+**Last Updated:** 2026-02-10 (Refactored: CompanyEmployees → OfferteMakerApi)
 **Framework Version:** .NET 8.0
 **Database:** SQL Server

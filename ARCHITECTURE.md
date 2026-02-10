@@ -14,7 +14,7 @@ Dit document beschrijft de architectuur van de Offerte Maker API. Deze architect
 
 De applicatie is ingedeeld in duidelijk gescheiden lagen, elk met een specifieke verantwoordelijkheid:
 
-### 1. **Presentation Layer** (`CompanyEmployees.Presentation`)
+### 1. **Presentation Layer** (`OfferteMakerApi.Presentation`)
 - **Verantwoordelijkheid:** HTTP-requests verwerken, validatie, response-formatting
 - **Inhoud:**
   - Controllers: API endpoints definiëren
@@ -68,7 +68,7 @@ De applicatie is ingedeeld in duidelijk gescheiden lagen, elk met een specifieke
 - Interface: `ILoggerManager`
 - Implementatie: Configuratie via `nlog.config`
 
-#### Exception Handling (`CompanyEmployees/Extensions`)
+#### Exception Handling (`OfferteMakerApi/Extensions`)
 - `GlobalExceptionHandler`: Centralized exception handling
 - Alle unhandled exceptions worden afgevangen en geformatteerd
 
@@ -164,8 +164,8 @@ HTTP Response
 
 ```
 Offerte-maker-api/
-└── CompanyEmployees/
-    ├── CompanyEmployees/                      # Main API Project
+└── OfferteMakerApi/
+    ├── OfferteMakerApi/                       # Main API Project
     │   ├── Program.cs
     │   ├── Extensions/                        # DI & Configuration
     │   ├── Utility/                           # Utility Classes
@@ -173,7 +173,7 @@ Offerte-maker-api/
     │   ├── ContextFactory/                    # DbContext Factory
     │   └── Properties/
     │
-    ├── CompanyEmployees.Presentation/         # Presentation Layer
+    ├── OfferteMakerApi.Presentation/          # Presentation Layer
     │   ├── Controllers/
     │   ├── ActionFilters/
     │   └── ModelBinders/
@@ -263,7 +263,7 @@ Offerte-maker-api/
 - **User/Identity:** Authenticatie & autorisatie (ASP.NET Identity)
 
 ### Migraties
-- Location: `CompanyEmployees/Migrations`
+- Location: `OfferteMakerApi/Migrations`
 - Gereedschap: EF Core Migrations
 - Database: SQL Server
 
@@ -347,7 +347,7 @@ Offerte-maker-api/
 4. Implement bedrijfslogica
 
 #### Stap 4: Presentation Layer
-1. Creëer `YourController.cs` in `CompanyEmployees.Presentation/Controllers`
+1. Creëer `YourController.cs` in `OfferteMakerApi.Presentation/Controllers`
 2. Voeg DTOs toe in `Shared/DataTransferObjects`
 3. Implement HTTP endpoints
 4. Voeg validation toe via `ValidationFilterAttribute`
@@ -467,6 +467,6 @@ Mogelijke verbeteringen zonder deze architectuur te wijzigen:
 
 ---
 
-**Laatst bijgewerkt:** 2026-02-09
+**Laatst bijgewerkt:** 2026-02-10 (Refactored: CompanyEmployees → OfferteMakerApi)
 **Versie:** 1.0
 **Owner:** Development Team
