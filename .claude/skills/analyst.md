@@ -211,13 +211,30 @@ Current pattern: /api/v1/[resources]
 
 ## Specification Output
 
-After all 8 phases, compile:
+After all 8 phases, compile and **SAVE TO:**
+
+```
+📁 .claude/specifications/{resource}-api-specification.md
+```
+
+Example filenames:
+- `.claude/specifications/quotes-api-specification.md`
+- `.claude/specifications/invoices-api-specification.md`
+- `.claude/specifications/projects-api-specification.md`
+
+Template at: `.claude/specifications/README.md`
+
+---
+
+Content:
 
 ```
 ✅ SPECIFICATION COMPLETE
 ═══════════════════════════════════════════════════════════
 
 # API Specification - [RESOURCE] API
+
+**Status:** Complete ✅ | Ready for Development
 
 ## Resource Overview
 - Resource: [NAME]
@@ -245,10 +262,28 @@ After all 8 phases, compile:
 ## Filtering Options
 [Pagination, sorting, filtering fields]
 
+## Special Operations
+[Custom endpoints]
+
+## Integration Notes
+✓ Follows ARCHITECT_CHECKLIST.md
+✓ 6-layer architecture required
+✓ Ready for Developer Agent
+
 ---
 
 Ready for Developer Agent to implement!
 ```
+
+---
+
+## After Creating Specification
+
+1. **Save to:** `.claude/specifications/{resource}-api-specification.md`
+2. **Commit:** Include spec in git
+3. **Message:** "spec: Add [Resource] API specification"
+4. **Link:** Add to `.claude/specifications/README.md` index
+5. **Next:** Developer Agent references this spec
 
 ---
 

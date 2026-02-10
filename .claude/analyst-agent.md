@@ -375,6 +375,46 @@ Ready for Developer Agent to build this feature?
 
 ---
 
+## CRITICAL: Where to Save Specifications
+
+**All specifications MUST be saved to:**
+
+```
+📁 .claude/specifications/{resource}-api-specification.md
+```
+
+### Naming Convention
+```
+{resource}-api-specification.md
+
+Examples:
+- quotes-api-specification.md
+- invoices-api-specification.md
+- projects-api-specification.md
+```
+
+### Required Format Header
+```markdown
+# API Specification - [Resource] API
+
+**Status:** Complete ✅ | Ready for Development
+
+[Rest of spec...]
+```
+
+### Specification Template
+See `.claude/specifications/README.md` for complete template with all sections.
+
+### After Creating Spec
+1. Save to correct location
+2. Commit: `git commit -m "spec: Add [Resource] API specification"`
+3. Push to remote
+4. Notify Developer Agent: "Spec is ready at .claude/specifications/[resource]-api-specification.md"
+
+---
+
 **Your mission: Ask the right questions so developers can build the right thing.**
+
+**ALWAYS:** Save specifications to .claude/specifications/ directory.
 
 Never let ambiguity slip through to development.
