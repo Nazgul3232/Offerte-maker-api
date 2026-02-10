@@ -84,7 +84,7 @@ Or copy from the repo if provided.
 
 ## 🔧 Step 4: Update Connection String
 
-Edit `CompanyEmployees/appsettings.json`:
+Edit `OfferteMakerApi/OfferteMakerApi/appsettings.json`:
 
 ```json
 {
@@ -126,7 +126,7 @@ Wait for "healthy" status (takes ~30 seconds).
 
 ```bash
 # Navigate to API project
-cd CompanyEmployees
+cd OfferteMakerApi/OfferteMakerApi
 
 # Restore NuGet packages
 dotnet restore
@@ -272,7 +272,7 @@ dotnet --version
 
 2. **Terminal 2: API (with auto-reload)**
    ```bash
-   cd CompanyEmployees
+   cd OfferteMakerApi/OfferteMakerApi
    dotnet watch run
    ```
 
@@ -302,7 +302,7 @@ If you have issues:
 
 ---
 
-**Last Updated:** 2026-02-09
+**Last Updated:** 2026-02-10 (Updated for OfferteMakerApi refactoring)
 **Platform:** macOS (Apple Silicon & Intel)
 **Framework:** .NET 8.0
 **Database:** SQL Server 2022
