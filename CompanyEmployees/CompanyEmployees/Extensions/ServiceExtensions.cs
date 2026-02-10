@@ -196,11 +196,11 @@ public static class ServiceExtensions
             {
                 Title = "Offerte-Maker-Api", 
                 Version = "v1",
-                Description = "Offerte Maker API - by AIctivity",
+                Description = "Offerte Maker API - by AIctify",
                 TermsOfService = new Uri("https://example.com/terms"),
                 Contact = new OpenApiContact
                 {
-                    Name = "AIctivity",
+                    Name = "AIctify",
                 },
             });
             s.SwaggerDoc("v2", new OpenApiInfo { Title = "Offerte-Maker-Api", Version = "v2" });
